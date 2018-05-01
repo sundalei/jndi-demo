@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>jndi-demo</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <resource-env-ref>
+    <description>
+          Object factory for MyBean instance
+      </description>
+    <resource-env-ref-name>
+          bean/MyBeanFactory
+      </resource-env-ref-name>
+    <resource-env-ref-type>
+          com.mycompany.MyBean
+      </resource-env-ref-type>
+  </resource-env-ref>
+  <resource-env-ref>
+      <description>Object factory for MyBean2 instance</description>
+      <resource-env-ref-name>bean/MyBeanFactory2</resource-env-ref-name>
+      <resource-env-ref-type>com.mycompany.MyBean2</resource-env-ref-type>
+  </resource-env-ref>
+  <resource-ref>
+      <description>
+      Resource reference to a factory for java.sql.Connection instance that
+      may be used for talking to a particular database that is configured
+      in the Context configuration for the web application.
+      </description>
+      <res-ref-name>jdbc/EmployeeDB</res-ref-name>
+      <res-type>javax.sql.DataSource</res-type>
+      <res-auth>Container</res-auth>
+  </resource-ref>
+</web-app>

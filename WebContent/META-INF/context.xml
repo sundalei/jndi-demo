@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<context>
+    <Resource name="bean/MyBeanFactory" auth="Container"
+              type="com.mycompany.MyBean"
+              factory="org.apache.naming.factory.BeanFactory"
+              bar="23" />
+    <Resource name="bean/MyBeanFactory2" auth="Container"
+              type="com.mycompany.MyBean2"
+              factory="org.apache.naming.factory.BeanFactory"
+              local="localhost"
+              remote="tomcat.apache.org"
+              forceString="local,remote=host" />
+    <Resource name="jdbc/EmployeeDB"
+              auth="Container"
+              type="javax.sql.DataSource"
+              username="root"
+              password="Fnst*1234"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/course_management"
+              maxActive="8"
+              maxIdle="4" />
+    
+</context>
